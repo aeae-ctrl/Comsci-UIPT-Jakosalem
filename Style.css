@@ -2,8 +2,9 @@
 @import url(https://fonts.googleapis.com/css2?family=Oswald);
 
   body {
-    background-color: beige;
+    background-color: #F9F9F9;
     margin: 0px;
+height: 100%;
   }
   
   .title1 {
@@ -13,7 +14,7 @@
     line-height: 15px;
     font-weight: 600;
     text-align: center;
-    color: #000000;
+    color: #2A4D9B;
   }
   
   .title2 {
@@ -22,7 +23,7 @@
     line-height: 55px;
     font-style: italic;
     text-align: center;
-    color: black;
+    color: #2E2E2E;
   }
   
   .column {
@@ -31,24 +32,9 @@
   padding: 5px;
 }
 
-  .linkcoll{
-    float: left;
+  .linkcoll, linkcolr{
     width: 40%;
-    padding: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  
-  .linkcolr{
-    float: right;
-    text-align: right;
-    width: 40%;
-    padding: 5px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
+    }
 
   .textcolumn {
   float: left;
@@ -75,6 +61,14 @@
   display: table;
 }
 
+
+  .linkrow {
+    margin-top: 70px;
+    margin-bottom: 70px;
+display:flex;
+justify-content: space-between;
+  }
+
   .nolink {
     font-family: Poppins;
     color: black;
@@ -83,6 +77,7 @@
     margin-left: 20px;
     margin-right: 20px;
     font-size: 30px;
+padding: 20px;
   }
   
   .linked {
@@ -92,10 +87,18 @@
     margin-right: 20px;
     margin-left: 20px;
     font-size: 30px;
+font-weight:bold;
+padding: 20px;
   }
+
+.linked:hover {
+background-color: #FFC20E; 
+color: black !important; 
+border-radius: 20%;
+}
   
   .exptext {
-    color: black;
+    color: #2E2E2E;
     font-family: Poppins;
     text-align: justify;
     font-size: 20px;
@@ -106,12 +109,11 @@
   
   .bgexptext{
     width: 100%;
-    height: 2300px;
     height: auto;
     max-height: 50%;
-    min-height: 2300px;
+    min-height: 65vh;
     overflow: hidden;
-    background: linear-gradient(to bottom, white, #0066ff 70px);
+    background: linear-gradient(to bottom, #F9F9F9, #2A4D9B 70px);
     margin-top: 0px;
     padding-top: 0px;
     margin-top: 0;
@@ -119,11 +121,12 @@
   }
   
   .navbar {
-    background-color: #0066ff;
+    background-color: #2A4D9B;
   height: 100px;
   display: flex;
   align-items: center;
   position: relative; 
+margin-bottom: 50px;
   }
   
   .navlogo{
@@ -147,7 +150,7 @@
 }
 
   .navlinks a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-family: Poppins;
     font-size: 20px;
@@ -168,7 +171,7 @@
     width: auto;
     height: auto;
     border-radius: 20%;
-    background-color: yellow;
+    background-color: #FFC20E;
 }
 
   .gallery{
@@ -195,6 +198,14 @@
   height: 100%;
   object-fit: cover;
   }
+
+.galleryvid {
+  grid-column: span 2;
+  grid-row: span 2;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
   
   .gallerycarousel {
   grid-column: span 2;
@@ -206,13 +217,13 @@
   
   .gallerycarousel * {box-sizing: border-box;}
 
-  .carophotos {
+  .carophotos, {
   width: 100%;
   height: 100%;
   object-fit: cover;
   }
   
-  .carophotos img {
+  .carophotos img, .galleryvid video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -273,4 +284,28 @@
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+.chartcon {
+  width: 80%;                  
+  max-width: 700px;            
+  margin: 20px auto;           
+  padding: 25px;
+  display: flex;
+  flex-direction: column;      
+  align-items: center;         
+  justify-content: flex-start; 
+  text-align: center;
+  border: 1px solid #ccc;      
+  background-color: #E6E6E6;   
+}
+
+.chartcon h1 {
+  margin-bottom: 45px;
+}
+
+.chart {
+  width: 100%;
+  height: 400px;
+  display: block;
 }
