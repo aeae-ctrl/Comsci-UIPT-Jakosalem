@@ -6,7 +6,7 @@ new Chart(ctx1, {
     labels: ['Grade 10', 'Grade 9', 'Grade 8', 'Grade 7'],
     datasets: [{
       label: 'participants',
-      data: [10, 20, 30, 15],
+      data: [130, 150, 140, 120],
       backgroundColor: ['blue', 'red', 'yellow', 'green']
    }]
   },
@@ -28,9 +28,9 @@ const ctx2 = document.getElementById('chart2');
 new Chart(ctx2, {
   type: 'pie',
   data: {
-    labels: ['Red', 'Blue', 'Green'],
+    labels: ['Children', 'Students', 'Parents/Guardians'],
     datasets: [{
-      data: [5, 15, 10]
+      data: [85, 527, 583]
     }]
   }
 });
