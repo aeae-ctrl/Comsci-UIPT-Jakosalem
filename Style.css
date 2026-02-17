@@ -3,9 +3,7 @@
 
   body {
     background-color: beige;
-    margin:0px;
-    overflow: hidden;
-    max-height: 100vh;
+    margin: 0px;
   }
   
   .title1 {
@@ -83,6 +81,7 @@
     opacity: 60%;
     margin: 0;
     margin-left: 20px;
+    margin-right: 20px;
     font-size: 30px;
   }
   
@@ -91,6 +90,7 @@
     font-family: Poppins;
     margin: 0;
     margin-right: 20px;
+    margin-left: 20px;
     font-size: 30px;
   }
   
@@ -103,7 +103,6 @@
     margin-right: 50px;
     padding-top: 80px;
   }
-  
   
   .bgexptext{
     width: 100%;
@@ -121,35 +120,157 @@
   
   .navbar {
     background-color: #0066ff;
-    overflow: hidden;
-    width: 100%;
-    height: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: relative; 
   }
   
-  .navbar a {
-    float: left;
-    color: black;
-    text-align: center;
-    align-items: center;
-    padding: 14px 16px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    font-family: Poppins;
-    font-size: 25px;
-    height: 100%;
-    font-weight: bold;
-}
-
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-  .navbar a.active {
-    background-color: yellow;
-    color: black;
-}
-
-  .carocon{
-
+  .navlogo{
+  padding-left: 20px;
+  height: 100%;
+  width: auto;
   }
+  
+    .navlogo img{
+  padding-left: 20px;
+  height: 100%;
+  width: auto;
+  }
+  
+  .navlinks {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); 
+  display: flex;
+  gap: 30px;
+}
+
+  .navlinks a {
+    color: black;
+    text-decoration: none;
+    font-family: Poppins;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .navlinks a:hover {
+    color: black;
+    text-decoration: none;
+    font-family: Poppins;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    border-radius: 20%;
+    background-color: yellow;
+}
+
+  .gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-auto-rows: 200px;
+  gap: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  }
+  
+  .gallerypic{
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 100%;
+  }
+  
+  .gallerypic:hover{
+  border: 1px solid #777;
+  }
+  
+  .gallerypic img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  
+  .gallerycarousel {
+  grid-column: span 2;
+  grid-row: span 2;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+  
+  .gallerycarousel * {box-sizing: border-box;}
+
+  .carophotos {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  
+  .carophotos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+  .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
